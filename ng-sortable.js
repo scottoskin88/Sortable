@@ -168,6 +168,12 @@
 								}
 							});
 						});
+						scope.$watch( ngSortable + '.triggerMouseUp', function(value) {
+							sortable._onDrop({
+								preventDefault: function(){},
+								stopPropagation: function(){}
+							});
+						});
 					}
 				}
 			};
